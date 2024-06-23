@@ -1,0 +1,46 @@
+﻿@model CreateGameViewModel
+
+@{
+    ViewData["Title"] = "Create New Game";
+}
+
+<h3>Create New Game</h3>
+<hr />
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-12 ">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <partial name="_Create" model="Model"></partial>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary mt-3" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-12 d-flex justify-content-center align-items-center overflow-hidden">
+        <div class="p-3 border rounded shadow-sm bg-light">
+            <img class="PreView img-fluid" style="max-height: 300px; object-fit: cover;" src="" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        document.getElementById('coverInput').addEventListener('change', function (event) {
+            var input = event.target;
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    document.querySelector('.PreView').setAttribute('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        });
+    </script>
+}

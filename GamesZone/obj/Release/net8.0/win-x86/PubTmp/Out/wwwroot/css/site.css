@@ -1,0 +1,138 @@
+* {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+/*_______________________________GamesController______________________________*/
+
+/* General styling for the button */
+.add-game-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* Hover effect */
+.add-game-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Focus effect for accessibility */
+.add-game-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Icon animation */
+.add-game-btn i {
+    transition: transform 0.3s ease;
+}
+
+.add-game-btn:hover i {
+    transform: scale(1.1);
+}
+
+.card-link {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-link:hover .game-card {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card {
+    max-width: 20rem;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+.game-card .badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+ }
+
+.game-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-link:hover .game-card img {
+    transform: scale(1.05);
+}
+
+.fixed-size-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .game-card {
+        max-width: 100%;
+    }
+}
+
+/*------------------------------------------------ Override Select2 styles -------------------------*/
+.select2-container .select2-selection--single {
+    background-color: #f0f5fa;
+    background-clip: padding-box;
+    outline: none;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    box-shadow: var(--bs-box-shadow-inset);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    background-color: #f0f5fa;
+    background-clip: padding-box;
+    outline: none;
+    border: var(--bs-border-width) solid transparent;
+    border-radius: var(--bs-border-radius);
+    box-shadow: var(--bs-box-shadow-inset);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: block;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 0px;
+}

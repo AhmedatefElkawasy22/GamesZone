@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Game>
+
+
+@{
+    ViewData["Title"] = "All Games";
+}
+
+@if (!Model.Any())
+{
+	<div class="alert  alert-secondary">
+		<strong>Not Found Games!</strong> No games added yet ,  <a asp-action="Create" class="alert-link">Add now</a>.
+	</div>
+}
+else
+{
+    <div class="container my-3">
+        <div class="row">
+            @foreach (var game in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a asp-action="Details" asp-route-id="@game.Id" class="card-link text-decoration-none">
+                        <div class="card text-white bg-info mb-3 game-card">
+                            <img src="@($"{FileSettings.ImagesPath}/{game.Cover}")" class="card-img-top fixed-size-img" alt="@game.Name" onerror="this.src='/images/default-cover.jpg'" />
+                            <span class="badge bg-info">@game.Category.Name</span>
+                            <div class="card-body">
+                                <h4 class="card-title">@game.Name</h4>
+                                <p class="card-text" style="color:darksalmon">@String.Join(" ", @game.Description.Split(' ').Take(5))....</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
+
+	<a class="btn btn-outline-primary add-game-btn" asp-action="Create">
+		<i class="bi bi-patch-plus-fill"></i>
+		Add Game
+	</a>
+}
+
