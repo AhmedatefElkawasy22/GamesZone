@@ -7,13 +7,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//var ConnectionString = builder.Configuration.GetConnectionString("Server") ?? throw new InvalidOperationException("Invalid Connection String");
 var ConnectionString = builder.Configuration.GetConnectionString("Server") ?? throw new InvalidOperationException("Invalid Connection String");
-builder.Services.AddDbContext<Context>(options =>options.UseSqlServer(ConnectionString));
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Context>();
+builder.Services.AddDbContext<Context>(options => options.UseSqlServer(ConnectionString));
+builder.Services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<Context>()
+                .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 builder.Services.AddScoped<ICategoriesAndDevicesService<CategoriesService>, CategoriesService>();
 builder.Services.AddScoped<ICategoriesAndDevicesService<DevicesServise>, DevicesServise>();
+
 builder.Services.AddScoped<IGameServices, GameServices>();
 builder.Services.AddScoped<IGameServices, GameServices>();
 

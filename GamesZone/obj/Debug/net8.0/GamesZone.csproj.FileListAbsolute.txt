@@ -257,3 +257,4 @@ D:\VS file\ProjectsMVC\GamesZone\GamesZone\bin\Debug\net8.0\runtimes\win\lib\net
 D:\VS file\ProjectsMVC\GamesZone\GamesZone\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\VS file\ProjectsMVC\GamesZone\GamesZone\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\VS file\ProjectsMVC\GamesZone\GamesZone\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\VS file\ProjectsMVC\GamesZone\GamesZone\obj\Debug\net8.0\GamesZone.sourcelink.json

@@ -73,6 +73,7 @@ namespace GamesZone.Controllers
 
 			UpdateGameViewModel model = new()
 			{
+				UserId = game.UserId,
 				id = id,
 				Name = game.Name,
 				CategoryID = game.CategoryID,

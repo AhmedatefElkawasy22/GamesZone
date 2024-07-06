@@ -19,10 +19,6 @@ namespace GamesZone.Services
 		}
 
 
-
-
-
-
 		public IEnumerable<Game> GetAll()
 		{
 			return _context.Game.AsNoTracking().ToList();
@@ -50,6 +46,7 @@ namespace GamesZone.Services
 			var coverName = await CreateImg(game.Cover);
 			Game add = new()
 			{
+				UserId = game.UserId,
 				Name = game.Name,
 				Description = game.Description,
 				Cover = coverName,
@@ -80,6 +77,8 @@ namespace GamesZone.Services
 			Game? old = _context.Game.Include(d => d.Devices).FirstOrDefault(e => e.Id == game.id);
 			if (old is null)
 				return -1;
+			//if (old.UserId != game.UserId)
+			//	return -2;
 
 			string oldCover = old.Cover;
 			bool hasNewCover = game.Cover is not null;
@@ -89,7 +88,7 @@ namespace GamesZone.Services
 				string coverName = await CreateImg(game.Cover);
 				old.Cover = coverName;
 			}
-
+			old.UserId = game.UserId;
 			old.Name = game.Name;
 			old.Description = game.Description;
 			old.CategoryID = game.CategoryID;

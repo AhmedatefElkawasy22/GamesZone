@@ -13,5 +13,4 @@ namespace GamesZone.Services
             return _context.Device.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name }).OrderBy(c => c.Text).ToList();
         }
     }
-    
 }

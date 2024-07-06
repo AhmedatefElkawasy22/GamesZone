@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\VS file\ProjectsMVC\GamesZone\GamesZone
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/VS file/ProjectsMVC/GamesZone/GamesZone/Views/Account/AddAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/VS file/ProjectsMVC/GamesZone/GamesZone/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/VS file/ProjectsMVC/GamesZone/GamesZone/Views/Games/_Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcX1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS file/ProjectsMVC/GamesZone/GamesZone/Views/Role/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS file/ProjectsMVC/GamesZone/GamesZone/Views/Shared/Error.cshtml]

@@ -257,3 +257,4 @@ D:\VS file\ProjectsMVC\GamesZone\GamesZone\obj\Release\net8.0\refint\GamesZone.d
 D:\VS file\ProjectsMVC\GamesZone\GamesZone\obj\Release\net8.0\GamesZone.pdb
 D:\VS file\ProjectsMVC\GamesZone\GamesZone\obj\Release\net8.0\GamesZone.genruntimeconfig.cache
 D:\VS file\ProjectsMVC\GamesZone\GamesZone\obj\Release\net8.0\ref\GamesZone.dll
+D:\VS file\ProjectsMVC\GamesZone\GamesZone\obj\Release\net8.0\GamesZone.sourcelink.json

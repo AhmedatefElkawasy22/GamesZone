@@ -1,0 +1,32 @@
+﻿@model GamesZone.ViewModels.RoleViewModel
+
+@{
+    ViewData["Title"] = "Add Role";
+}
+
+<div class="container">
+    <h1 class="display-4">Add a New Role</h1>
+    <p class="lead">Use the form below to create a new role within the system.</p>
+    <hr />
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="AddRole">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RoleName" class="control-label font-weight-bold"></label>
+                    <input asp-for="RoleName" class="form-control" placeholder="Enter role name" />
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <button type="submit" class="btn btn-primary btn-block">Add Role</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

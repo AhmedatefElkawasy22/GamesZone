@@ -1,4 +1,6 @@
-﻿using GamesZone.ViewModels;
+﻿using GamesZone.Models;
+using GamesZone.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,10 +8,10 @@ namespace GamesZone.Controllers
 {
     public class AccountController : Controller
     {
-        private UserManager<IdentityUser> userManager;
-        private SignInManager<IdentityUser> signInManager;
+        private UserManager<User> userManager;
+        private SignInManager<User> signInManager;
 
-        public AccountController(UserManager<IdentityUser> _userManager, SignInManager<IdentityUser> _signInManager)
+        public AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager)
         {
             userManager = _userManager;
             signInManager = _signInManager;
@@ -23,7 +25,7 @@ namespace GamesZone.Controllers
         {
             if (ModelState.IsValid)
             {
-                IdentityUser user = new IdentityUser();
+                User user = new User();
                 user.Email = New.Email;
                 user.UserName = New.UserName;
                 IdentityResult result = await userManager.CreateAsync(user, New.Password); // make passwork is Hash
@@ -52,7 +54,7 @@ namespace GamesZone.Controllers
         {
             if (ModelState.IsValid)
             {
-                IdentityUser user = await userManager.FindByNameAsync(login.UserName);
+                User user = await userManager.FindByNameAsync(login.UserName);
                 if (user != null)
                 {
                     //create cookie if enter a viled password
@@ -73,6 +75,46 @@ namespace GamesZone.Controllers
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("Login");
+        }
+        [Authorize(Roles = "Admin")]
+        public IActionResult AddAdmin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddAdmin(RegistrationViewModel New)
+        {
+            if (ModelState.IsValid)
+            {
+                User user = new User();
+                user.Email = New.Email;
+                user.UserName = New.UserName;
+                IdentityResult result = await userManager.CreateAsync(user, New.Password); // make passwork is Hash
+                if (result.Succeeded)
+                {
+                    //add role admin
+                    IdentityResult res = await userManager.AddToRoleAsync(user, "Admin");
+                    if (res.Succeeded)
+                    {
+                        //creat cookie
+                        await signInManager.SignInAsync(user, false);
+                        return RedirectToAction("Index", "Games");
+
+                    }
+                    foreach (var error in res.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                }
+            }
+            return View(New);
         }
     }
 }

@@ -5,7 +5,8 @@ namespace GamesZone.ViewModels
 {
 	public class FormViewModel
 	{
-		[MaxLength(250)]
+		public string UserId { get; set; }
+        [MaxLength(250)]
 		public string Name { get; set; } = string.Empty;
 
 		[Display(Name = "Category")]

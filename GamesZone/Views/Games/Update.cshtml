@@ -1,46 +1,76 @@
 ﻿@model UpdateGameViewModel
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<User> UserManager
 
 @{
-	ViewData["Title"] = "Update Game";
+    var user_Id = UserManager.GetUserId(User);
+}
+@{
+    ViewData["Title"] = "Update Game";
 }
 
 <h3>Update Game</h3>
 <hr />
 
 <div class="row">
-	<div class="col-md-6 col-lg-6 col-sm-12 ">
-		<form asp-action="Update" enctype="multipart/form-data">
-			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-			<partial name="_Update" model="Model" ></partial>
-			<div class="form-group">
-				<input type="submit" value="Update" class="btn btn-primary mt-3" />
-			</div>
-		</form>
-	</div>
-	<div class="col-md-6 col-lg-6 col-sm-12 d-flex justify-content-center align-items-center overflow-hidden">
-		<div class="p-3 border rounded shadow-sm bg-light">
-			<img class="PreView img-fluid" style="max-height: 300px; object-fit: cover;" src="@FileSettings.ImagesPath/@Model.CoverPath" />
-		</div>
-	</div>
+    <div class="col-md-6 col-lg-6 col-sm-12 ">
+        <form asp-action="Update" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <input asp-for="UserId" type="hidden" value="@(User.IsInRole("Admin") ? Model.UserId : user_Id)" />
+
+            <partial name="_Update" model="Model"></partial>
+
+            <div class="form-group position-relative">
+                <input type="submit" value="Update" class="btn btn-primary mt-3"
+                @(user_Id != Model.UserId && !(User.IsInRole("Admin")) ? "disabled='disabled' title='You do not have permission to edit'" : "") />
+                @if (user_Id != Model.UserId && !(User.IsInRole("Admin")))
+                {
+                    <div class="overlay" title="You do not have permission to edit"></div>
+                    <p style="color: red; font-size: 24px;">You do not have permission to edit</p>
+                }
+            </div>
+
+
+        </form>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-12 d-flex justify-content-center align-items-center overflow-hidden">
+        <div class="p-3 border rounded shadow-sm bg-light">
+            <img class="PreView img-fluid" style="max-height: 300px; object-fit: cover;" src="@FileSettings.ImagesPath/@Model.CoverPath" />
+        </div>
+    </div>
 </div>
 
 @section Scripts {
-	@{
-		await Html.RenderPartialAsync("_ValidationScriptsPartial");
-	}
-	<script>
-		document.getElementById('coverInput').addEventListener('change', function (event) {
-			var input = event.target;
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.getElementById('coverInput').addEventListener('change', function (event) {
+            var input = event.target;
 
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-				reader.onload = function (e) {
-					document.querySelector('.PreView').setAttribute('src', e.target.result);
-				}
+                reader.onload = function (e) {
+                    document.querySelector('.PreView').setAttribute('src', e.target.result);
+                }
 
-				reader.readAsDataURL(input.files[0]);
-			}
-		});
-	</script>
+                reader.readAsDataURL(input.files[0]);
+            }
+        });
+    </script>
 }
+
+<style>
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0);
+        z-index: 1;
+        cursor: not-allowed;
+    }
+</style>

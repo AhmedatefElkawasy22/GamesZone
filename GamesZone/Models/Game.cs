@@ -5,7 +5,7 @@ namespace GamesZone.Models
 {
 	public class Game : BaseEntity
 	{
-		
+		public string UserId { get; set; }
 		[MaxLength(2500)]
 		public string Description { get; set; }
 		[MaxLength(500)]
@@ -13,8 +13,6 @@ namespace GamesZone.Models
 		[ForeignKey("Category")]
 		public int CategoryID { get; set; }
 		public Category Category { get; set; }
-
 		public List<GameDevice> Devices { get; set; }
-
 	}
 }

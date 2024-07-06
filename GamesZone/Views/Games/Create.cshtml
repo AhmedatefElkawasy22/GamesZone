@@ -1,4 +1,10 @@
 ﻿@model CreateGameViewModel
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<User> UserManager
+
+@{
+    var user_Id = UserManager.GetUserId(User);
+}
 
 @{
     ViewData["Title"] = "Create New Game";
@@ -9,7 +15,8 @@
 <div class="row">
     <div class="col-md-6 col-lg-6 col-sm-12 ">
         <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="UserId" type="hidden" value="@user_Id"/>
             <partial name="_Create" model="Model"></partial>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary mt-3" />
