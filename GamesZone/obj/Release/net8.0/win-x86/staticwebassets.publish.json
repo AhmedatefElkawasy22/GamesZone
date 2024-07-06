@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qfv6z+Sr20L+Bz+p6pWSJRdx3nF+tEC7VrLdcL+KlRw=",
+  "Hash": "R1/mii7Ch6MdhwfM7FB3EL6kw7XBhNKEq/MPSfVeIxE=",
   "Source": "GamesZone",
   "BasePath": "_content/GamesZone",
   "Mode": "Default",
@@ -112,25 +112,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Games\\6014c76b-b0de-46aa-9fb6-a519bf9a3919.jpg"
     },
     {
-      "Identity": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\wwwroot\\assets\\images\\Games\\7dae02e3-d493-4338-b36d-2457c5cbfa50.jpg",
-      "SourceId": "GamesZone",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\wwwroot\\",
-      "BasePath": "_content/GamesZone",
-      "RelativePath": "assets/images/Games/7dae02e3-d493-4338-b36d-2457c5cbfa50.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\Games\\7dae02e3-d493-4338-b36d-2457c5cbfa50.jpg"
-    },
-    {
       "Identity": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\wwwroot\\assets\\images\\Games\\ae8440ac-6274-4816-a4b3-4603087386b0.jpg",
       "SourceId": "GamesZone",
       "SourceType": "Discovered",
@@ -148,25 +129,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\Games\\ae8440ac-6274-4816-a4b3-4603087386b0.jpg"
-    },
-    {
-      "Identity": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\wwwroot\\assets\\images\\Games\\afeee700-e166-49d8-9529-d74c3a982b5d.jpg",
-      "SourceId": "GamesZone",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\wwwroot\\",
-      "BasePath": "_content/GamesZone",
-      "RelativePath": "assets/images/Games/afeee700-e166-49d8-9529-d74c3a982b5d.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\Games\\afeee700-e166-49d8-9529-d74c3a982b5d.jpg"
     },
     {
       "Identity": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\wwwroot\\assets\\images\\Games\\c90bc615-d84d-4f0f-a327-7192162fc507.jpeg",

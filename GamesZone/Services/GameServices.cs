@@ -57,20 +57,32 @@ namespace GamesZone.Services
 			return _context.SaveChanges();
 		}
 
-		public int Delete(int id)
+		public int Delete(int id, string userId, bool isAdmin)
 		{
 			Game? game = GetById(id);
-			if (game != null)
-				_context.Game.Remove(game);
 
-			int res = _context.SaveChanges();
-			if(res>0)
+			if (game == null)
+				return 0;
+			
+			// Check if the user is an admin or the owner of the game
+			if (!isAdmin && game.UserId != userId)
 			{
-                string cover = Path.Combine(_ImagePath, game.Cover);
-                File.Delete(cover);
-            }
+				// User is not authorized to delete the game
+				return 0;
+			}
+
+			_context.Game.Remove(game);
+			int res = _context.SaveChanges();
+
+			if (res > 0)
+			{
+				string cover = Path.Combine(_ImagePath, game.Cover);
+				File.Delete(cover);
+			}
+
 			return res;
 		}
+
 
 		public async Task<int> Update(UpdateGameViewModel game)
 		{

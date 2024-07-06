@@ -3,6 +3,7 @@ using GamesZone.Services;
 using GamesZone.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GamesZone.Controllers
@@ -13,15 +14,20 @@ namespace GamesZone.Controllers
 		private readonly ICategoriesAndDevicesService<CategoriesService> _categoriesService;
 		private readonly ICategoriesAndDevicesService<DevicesServise> _devicesServise;
 		private readonly IGameServices _gameServices;
+		private readonly IHttpContextAccessor _httpContextAccessor;
+
 		public GamesController(ICategoriesAndDevicesService<CategoriesService> categoriesService,
 							   ICategoriesAndDevicesService<DevicesServise> devicesServise,
-							   IGameServices gameServices)
+							   IGameServices gameServices,
+							   IHttpContextAccessor httpContextAccessor
+							   )
 		{
 			_categoriesService = categoriesService;
 			_devicesServise = devicesServise;
 			_gameServices = gameServices;
+			_httpContextAccessor = httpContextAccessor;
 		}
-		
+
 		public IActionResult Index()
 		{
 			IEnumerable<Game> games = _gameServices.GetAllIncludedCategoryAndDevices();
@@ -61,7 +67,15 @@ namespace GamesZone.Controllers
 		}
 		public IActionResult Delete([FromRoute] int id)
 		{
-			int res = _gameServices.Delete(id);
+			// Get the current user's ID
+			string currentUserId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+			// Check if the current user is an admin
+			bool isAdmin = _httpContextAccessor.HttpContext.User.IsInRole("Admin");
+
+			int res = _gameServices.Delete(id, currentUserId, isAdmin);
+			if (res == 0)
+				return NotFound();
 			return RedirectToAction("Index");
 		}
 		public IActionResult Update([FromRoute] int id)
@@ -105,7 +119,7 @@ namespace GamesZone.Controllers
 				return View(game);
 			}
 			int res = await _gameServices.Update(game);
-			    if (res == -1) {return NotFound();}
+			if (res == -1) { return NotFound(); }
 			return RedirectToAction(nameof(Details), new { id = id });
 		}
 	}

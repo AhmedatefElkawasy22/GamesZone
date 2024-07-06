@@ -11,7 +11,7 @@ namespace GamesZone.Services
 		Game? GetById(int id);
 		Game? GetByIdIncludedCategoryAndDevices(int id);
 		Task<int> Create(CreateGameViewModel game);
-		int Delete(int id);
+		int Delete(int id, string userId, bool isAdmin);
 		Task<int> Update(UpdateGameViewModel game);
 	}
 }

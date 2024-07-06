@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\VS file\\ProjectsMVC\\GamesZone\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|d:\\vs file\\projectsmvc\\gameszone\\gameszone\\migrations\\20240706231329_server 2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|solutionrelative:gameszone\\migrations\\20240706231329_server 2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|d:\\vs file\\projectsmvc\\gameszone\\gameszone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|solutionrelative:gameszone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|d:\\vs file\\projectsmvc\\gameszone\\gameszone\\services\\gameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|solutionrelative:gameszone\\services\\gameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|d:\\vs file\\projectsmvc\\gameszone\\gameszone\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|solutionrelative:gameszone\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|d:\\vs file\\projectsmvc\\gameszone\\gameszone\\services\\igameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|solutionrelative:gameszone\\services\\igameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|d:\\vs file\\projectsmvc\\gameszone\\gameszone\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A4ECCEE3-BE4A-4635-86D2-04789C02C60B}|GamesZone\\GamesZone.csproj|solutionrelative:gameszone\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 204,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240706231329_server 2.cs",
+              "DocumentMoniker": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Migrations\\20240706231329_server 2.cs",
+              "RelativeDocumentMoniker": "GamesZone\\Migrations\\20240706231329_server 2.cs",
+              "ToolTip": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Migrations\\20240706231329_server 2.cs",
+              "RelativeToolTip": "GamesZone\\Migrations\\20240706231329_server 2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T23:13:29.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\appsettings.json",
+              "RelativeDocumentMoniker": "GamesZone\\appsettings.json",
+              "ToolTip": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\appsettings.json",
+              "RelativeToolTip": "GamesZone\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-06T22:43:07.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Program.cs",
+              "RelativeDocumentMoniker": "GamesZone\\Program.cs",
+              "ToolTip": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Program.cs",
+              "RelativeToolTip": "GamesZone\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T22:42:53.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IGameServices.cs",
+              "DocumentMoniker": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Services\\IGameServices.cs",
+              "RelativeDocumentMoniker": "GamesZone\\Services\\IGameServices.cs",
+              "ToolTip": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Services\\IGameServices.cs",
+              "RelativeToolTip": "GamesZone\\Services\\IGameServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T22:37:47.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameServices.cs",
+              "DocumentMoniker": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Services\\GameServices.cs",
+              "RelativeDocumentMoniker": "GamesZone\\Services\\GameServices.cs",
+              "ToolTip": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Services\\GameServices.cs",
+              "RelativeToolTip": "GamesZone\\Services\\GameServices.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAgwDwAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T22:28:57.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GamesController.cs",
+              "DocumentMoniker": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Controllers\\GamesController.cs",
+              "RelativeDocumentMoniker": "GamesZone\\Controllers\\GamesController.cs",
+              "ToolTip": "D:\\VS file\\ProjectsMVC\\GamesZone\\GamesZone\\Controllers\\GamesController.cs",
+              "RelativeToolTip": "GamesZone\\Controllers\\GamesController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAADwv0QAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T22:27:49.58Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
